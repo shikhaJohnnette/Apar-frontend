@@ -20,7 +20,7 @@ import {
   type CatalogStatus,
 } from '@/features/admin/api/catalog';
 
-const ROLE_SUPER_ADMIN = 'SUPER_ADMIN';
+const ROLE_SUPER_ADMIN = 'ROLE_SUPER_ADMIN';
 const ROLE_LOADING = '__role_loading__';
 type AdminSection = 'books' | 'categories';
 
