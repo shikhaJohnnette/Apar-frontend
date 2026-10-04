@@ -7,7 +7,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'APAR Publication - Knowledge Without Limits',
+  title: 'Gyanandam Publication - Knowledge Without Limits',
   description: 'Buy courses, books, and practice tests online.',
 };
 

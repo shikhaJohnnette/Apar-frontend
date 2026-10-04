@@ -16,14 +16,14 @@ export default function Navbar() {
     <header className="w-full bg-[#0F2C3D] text-white shadow-lg sticky top-0 z-50">
       {/* Top Bar - Already clean from previous response */}
       <div className="bg-[#0a1f2a] px-6 py-2 text-xs flex justify-between items-center">
-        <span>📚 APAR PUBLICATION – Knowledge Without Limits</span>
+        <span>📚 GYANANDAM PUBLICATION – Knowledge Without Limits</span>
         <span className="hidden md:block">📞 +91 93046 58246</span>
       </div>
 
       {/* Main Nav */}
       <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tight">
-          <span className="text-[#FF6B00]">APAR</span>
+          <span className="text-[#FF6B00]">Gyanandam</span>
           <span>Publication</span>
         </Link>
 

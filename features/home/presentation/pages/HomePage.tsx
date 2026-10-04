@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { books } from '@/features/books/data/books';
-import { BookCard } from '@/features/books/presentation/components/BookCard';
+import { BookCatalogue } from '@/features/books/presentation/components/BookCatalogue';
 import { BooksHeader } from '@/features/books/presentation/components/BooksHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 
@@ -45,8 +44,8 @@ export function HomePage() {
             </div>
             <p className="hero-footnote"><span>★★★★★</span> Chosen by curious minds across India</p>
           </div>
-          <div className="hero-art" aria-label="A selection of APAR books">
-            <div className="hero-art-caption"><span>THE APAR EDIT</span><span>NO. 04 / 2026</span></div>
+          <div className="hero-art" aria-label="A selection of Gyanandam books">
+            <div className="hero-art-caption"><span>THE GYANANDAM EDIT</span><span>NO. 04 / 2026</span></div>
             <div className="hero-book hero-book-back"><span>KNOW<br />MORE</span><i>Ideas shape everything.</i></div>
             <div className="hero-book hero-book-middle"><span>THE<br />WILD<br />MIND</span><i>Stories for the curious</i></div>
             <div className="hero-book hero-book-front"><span>MAKE<br />IT<br />MATTER</span><i>A field guide to your next chapter</i></div>
@@ -77,9 +76,7 @@ export function HomePage() {
 
         <section className="store-section content-width">
           <SectionTitle eyebrow="GOOD COMPANY FOR YOUR SHELF" title="Featured books" href="/books" linkText="Browse all books" />
-          <div className="book-grid home-book-grid">
-            {books.slice(0, 4).map((book) => <BookCard book={book} key={book.id} />)}
-          </div>
+          <BookCatalogue limit={4} className="book-grid home-book-grid" />
         </section>
 
         <section className="series-section">
@@ -117,11 +114,6 @@ export function HomePage() {
           <div className="spotlight-stamp"><strong>15%</strong><span>OFF<br />THIS WEEK</span></div>
         </section>
 
-        <section className="closing-note content-width">
-          <span className="closing-mark" aria-hidden="true">“</span>
-          <p>Somewhere between the first page and the last, a little thing changes.</p>
-          <span className="closing-byline">MAKE SPACE FOR WHAT&apos;S NEXT — APAR</span>
-        </section>
       </main>
       <SiteFooter />
     </div>

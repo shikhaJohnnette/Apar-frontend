@@ -59,6 +59,14 @@ button { font: inherit; cursor: pointer; }
 .book-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; }
 .book-price strong { margin-right: 8px; color: #061e3e; font-size: 18px; } .book-price del { color: #71829b; font-size: 11px; }
 .book-rating { padding: 4px 9px; border-radius: 15px; background: #fff6e2; color: #d79622; font-size: 12px; }
+.api-book-cover { overflow: hidden; background: #e8edf0; }
+.api-book-cover img { width: 100%; height: 100%; object-fit: cover; }
+.api-book-cover-placeholder { color: #71829b; font-family: Georgia, serif; font-size: 16px; }
+.api-book-card h2 { line-height: 1.35; }
+.api-book-price { color: #061e3e; font-size: 17px; }
+.api-book-category { color: #71829b; font-size: 11px; text-align: right; }
+.book-catalogue-status { margin: 30px 0; color: var(--muted); font-size: 14px; }
+.book-catalogue-error { color: #8a3f30; }
 
 @media (max-width: 850px) { .book-grid { grid-template-columns: repeat(2, 1fr); } .books-tabs { display: none; } }
 @media (max-width: 520px) {

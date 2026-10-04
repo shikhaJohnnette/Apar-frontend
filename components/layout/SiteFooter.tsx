@@ -5,16 +5,28 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="content-width footer-main">
         <div className="footer-brand">
-          <Link href="/" className="footer-wordmark">APAR<span>.</span></Link>
-          <p>Good books. Clear goals.<br />A little more room to grow.</p>
+          <strong className="footer-company">Gyanandam Publication Pvt. Ltd.</strong>
+          <p>Gyanandam Publication is India&apos;s fastest growing with top class quality content</p>
+          <address className="footer-contact">
+            <span><span aria-hidden="true">⌂</span> Indira Nagar, Lucknow 226016</span>
+            <a href="tel:+915223544295"><span aria-hidden="true">☎</span> 0522 3544295</a>
+          </address>
         </div>
         <div className="footer-links">
-          <div><strong>Explore</strong><Link href="/">Home</Link><Link href="/books">Books</Link><Link href="/test-series">Test Series</Link></div>
-          <div><strong>We&apos;re here</strong><Link href="/auth/login">Your account</Link><a href="mailto:hello@apar.example">Contact us</a><a href="mailto:hello@apar.example">Help & support</a></div>
+          <div><strong>Company</strong><Link href="/">About Us</Link><a href="tel:+915223544295">Contact Us</a><Link href="/auth/register">Careers</Link></div>
+          <div><strong>Products</strong><Link href="/books">Ebooks</Link><Link href="/books">Books</Link><Link href="/test-series">Mock / PracticeTests</Link></div>
         </div>
-        <div className="footer-newsletter"><span className="section-eyebrow">A NOTE FROM APAR</span><strong>Good things to read. No noise.</strong><p>Thoughtful picks and fresh arrivals, now and then.</p><a href="mailto:hello@apar.example">Say hello <span aria-hidden="true">↗</span></a></div>
       </div>
-      <div className="content-width footer-bottom"><span>© 2026 APAR Publication</span><span>Made for the curious.</span></div>
+      <div className="content-width footer-bottom">
+        <span>© 2026 Gyanandam Publication</span>
+        <nav className="footer-legal" aria-label="Legal">
+          <a href="#cancellation-refunds">Cancellation &amp; Refunds</a>
+          <span aria-hidden="true">|</span>
+          <a href="#terms-and-conditions">Terms &amp; Conditions</a>
+          <span aria-hidden="true">|</span>
+          <a href="#privacy-policy">Privacy Policy</a>
+        </nav>
+      </div>
     </footer>
   );
 }

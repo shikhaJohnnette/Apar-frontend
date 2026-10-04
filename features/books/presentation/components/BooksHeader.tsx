@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { AdminPanelLink } from '@/features/auth/components/AdminPanelLink';
+import { LoginDialog } from '@/features/auth/components/LoginDialog';
 
 type BooksHeaderProps = {
   active?: 'home' | 'books' | 'tests';
@@ -8,9 +10,9 @@ export function BooksHeader({ active = 'books' }: BooksHeaderProps) {
   return (
     <header className="site-header">
       <div className="books-header">
-        <Link href="/" className="brand-mark" aria-label="APAR home">
-          <span className="brand-cap">A</span>
-          <span><strong>APAR</strong><small>LEARN. GROW. GO FURTHER.</small></span>
+        <Link href="/" className="brand-mark" aria-label="Gyanandam home">
+          <span className="brand-cap">G</span>
+          <span><strong>Gyanandam</strong><small>LEARN. GROW. GO FURTHER.</small></span>
         </Link>
 
         <nav className="books-tabs" aria-label="Main navigation">
@@ -20,7 +22,8 @@ export function BooksHeader({ active = 'books' }: BooksHeaderProps) {
         </nav>
 
         <div className="user-actions">
-          <Link className="header-account" href="/auth/login">Sign in <span aria-hidden="true">↗</span></Link>
+          <AdminPanelLink />
+          <LoginDialog />
           <Link className="header-cart" href="/books" aria-label="Browse books">Bag <span aria-hidden="true">＋</span></Link>
         </div>
       </div>
