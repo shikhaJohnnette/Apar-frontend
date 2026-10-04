@@ -108,7 +108,7 @@ export function BookCatalogue({
             <strong className="api-book-price">₹{Number(book.price).toFixed(2)}</strong>
             <span className="api-book-category">{book.categoryName}</span>
           </div>
-          {showPdfLink && (role === 'ROLE_SUPER_ADMIN' || (role === 'ROLE_STUDENT' && Number(book.price) === 0)) && (
+          {showPdfLink && (role === 'ROLE_SUPER_ADMIN' || Number(book.price) === 0) && (
             <button className="api-book-read" type="button" onClick={() => void openPdf(book)} disabled={openingPdfFor !== null}>
               {openingPdfFor === book.id ? 'Opening PDF...' : 'Open PDF'} <span aria-hidden="true">↗</span>
             </button>
