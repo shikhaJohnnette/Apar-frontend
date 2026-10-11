@@ -74,7 +74,7 @@ jobs:
           HOSTINGER_SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
         run: |
           ssh -i ~/.ssh/hostinger_deploy -p "${HOSTINGER_SSH_PORT:-22}" "$HOSTINGER_USER@$HOSTINGER_HOST" \
-            "mkdir -p '$HOSTINGER_APP_DIR' && cat > '$HOSTINGER_APP_DIR/compose.yaml'" < compose.yaml
+            "mkdir -p '$HOSTINGER_APP_DIR' && cat > '$HOSTINGER_APP_DIR/compose.frontend.yaml'" < compose.yaml
 
       - name: Deploy image on Hostinger
         if: github.event_name == 'push'
@@ -85,4 +85,4 @@ jobs:
           HOSTINGER_SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
         run: |
           ssh -i ~/.ssh/hostinger_deploy -p "${HOSTINGER_SSH_PORT:-22}" "$HOSTINGER_USER@$HOSTINGER_HOST" \
-            "cd '$HOSTINGER_APP_DIR' && IMAGE_TAG='$GITHUB_SHA' docker compose pull frontend && IMAGE_TAG='$GITHUB_SHA' docker compose up -d --no-build frontend && docker compose ps frontend"
+            "cd '$HOSTINGER_APP_DIR' && IMAGE_TAG='$GITHUB_SHA' docker compose -p apar -f compose.frontend.yaml pull frontend && IMAGE_TAG='$GITHUB_SHA' docker compose -p apar -f compose.frontend.yaml up -d --no-build frontend && docker compose -p apar -f compose.frontend.yaml ps frontend"
