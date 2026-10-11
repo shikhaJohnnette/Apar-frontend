@@ -60,8 +60,9 @@ jobs:
           HOSTINGER_KNOWN_HOSTS: ${{ secrets.HOSTINGER_KNOWN_HOSTS }}
         run: |
           install -m 700 -d ~/.ssh
-          printf '%s\n' "$HOSTINGER_SSH_PRIVATE_KEY" > ~/.ssh/hostinger_deploy
+          printf '%s\n' "$HOSTINGER_SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/hostinger_deploy
           chmod 600 ~/.ssh/hostinger_deploy
+          ssh-keygen -y -P "" -f ~/.ssh/hostinger_deploy > /dev/null
           printf '%s\n' "$HOSTINGER_KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
 
