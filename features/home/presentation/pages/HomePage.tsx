@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { BookCatalogue } from '@/features/books/presentation/components/BookCatalogue';
 import { BooksHeader } from '@/features/books/presentation/components/BooksHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
@@ -35,22 +36,24 @@ export function HomePage() {
       <main>
         <section className="home-hero content-width">
           <div className="hero-copy">
-            <p className="hero-kicker"><span /> A LITTLE MORE ROOM TO GROW</p>
-            <h1>Find your next<br /><em>bright idea.</em></h1>
-            <p className="hero-description">Books to get lost in. Practice to move you forward. Good things happen when curiosity has somewhere to go.</p>
+            <h1>Knowledge with Joy, <em>Beyond Limits.</em></h1>
+            <p className="hero-description">Gyanandam Publication offers academic and competitive exam books, concept-based study materials, and MCQ practice resources to support effective learning, revision, and self-assessment.</p>
             <div className="hero-actions">
               <Link className="button-primary" href="/books">Explore books <span aria-hidden="true">↗</span></Link>
               <Link className="button-secondary" href="/test-series">Explore test series</Link>
             </div>
             <p className="hero-footnote"><span>★★★★★</span> Chosen by curious minds across India</p>
           </div>
-          <div className="hero-art" aria-label="A selection of Gyanandam books">
-            <div className="hero-art-caption"><span>THE GYANANDAM EDIT</span><span>NO. 04 / 2026</span></div>
-            <div className="hero-book hero-book-back"><span>KNOW<br />MORE</span><i>Ideas shape everything.</i></div>
-            <div className="hero-book hero-book-middle"><span>THE<br />WILD<br />MIND</span><i>Stories for the curious</i></div>
-            <div className="hero-book hero-book-front"><span>MAKE<br />IT<br />MATTER</span><i>A field guide to your next chapter</i></div>
-            <div className="hero-art-note"><span className="note-star">✳</span><span>Good pages.<br />Better possibilities.</span></div>
-            <span className="hero-art-index">01 — 03</span>
+          <div className="hero-art">
+            <Image
+              className="hero-mockup"
+              src="/images/mockup.png"
+              alt="Trending books from Gyanandam Publication for September 2026"
+              width={1588}
+              height={990}
+              priority
+              sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 600px"
+            />
           </div>
         </section>
 

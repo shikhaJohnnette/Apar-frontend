@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { AdminPanelLink } from '@/features/auth/components/AdminPanelLink';
 import { LoginDialog } from '@/features/auth/components/LoginDialog';
 
@@ -11,8 +12,14 @@ export function BooksHeader({ active = 'books' }: BooksHeaderProps) {
     <header className="site-header">
       <div className="books-header">
         <Link href="/" className="brand-mark" aria-label="Gyanandam home">
-          <span className="brand-cap">G</span>
-          <span><strong>Gyanandam</strong><small>LEARN. GROW. GO FURTHER.</small></span>
+          <Image
+            className="brand-logo"
+            src="/images/logo.jpeg"
+            alt="Gyanandam Publication"
+            width={1254}
+            height={1254}
+            priority
+          />
         </Link>
 
         <nav className="books-tabs" aria-label="Main navigation">
