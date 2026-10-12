@@ -5,10 +5,10 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="content-width footer-main">
         <div className="footer-brand">
-          <strong className="footer-company">Gyanandam Publication Pvt. Ltd.</strong>
+          <strong className="footer-company">Gyanandam Publication</strong>
           <p>Gyanandam Publication is India&apos;s fastest growing with top class quality content</p>
           <address className="footer-contact">
-            <span><span aria-hidden="true">⌂</span> Indira Nagar, Lucknow 226016</span>
+            <span><span aria-hidden="true">⌂</span> Address A-5 Vimal Nagar, Kamta, Lucknow 226028</span>
             <a href="tel:+915223544295"><span aria-hidden="true">☎</span> 0522 3544295</a>
           </address>
         </div>
